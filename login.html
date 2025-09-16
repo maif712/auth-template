@@ -24,20 +24,29 @@
 <main>
     <section class="form-section section-padding">
         <div class="container">
-            <div class="form-container" data-aos="fade-up">
-                <form id="login-form" class="form-card">
-                    <h2 class="form-title">Login</h2>
-                    <div class="form-group">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" id="password" name="password" class="form-input" placeholder="Enter your password" required>
-                    </div>
-                    <button type="submit" class="cta-button-primary form-button">Login</button>
-                    <p class="form-message"></p>
-                </form>
+            <div class="form-grid">
+                <div class="form-wrapper" data-aos="fade-right">
+                    <form id="login-form" class="form-card">
+                        <h2 class="form-title">Welcome Back!</h2>
+                        <p class="form-subtitle">Login to continue to your account.</p>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" id="password" name="password" class="form-input" placeholder="Enter your password" required>
+                        </div>
+                        <button type="submit" class="cta-button-primary form-button">Login</button>
+                        <p class="form-message"></p>
+                        <p class="form-switch">Don't have an account? <a href="register.html">Register</a></p>
+                    </form>
+                </div>
+                <div class="form-decoration" data-aos="fade-left">
+                    <div class="decoration-shape shape-1"></div>
+                    <div class="decoration-shape shape-2"></div>
+                    <div class="decoration-shape shape-3"></div>
+                </div>
             </div>
         </div>
     </section>

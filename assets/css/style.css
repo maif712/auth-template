@@ -357,3 +357,70 @@ h1, h2, h3, h4, h5, h6 {
     color: red;
     font-weight: 600;
 }
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--spacing-xl);
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.form-subtitle {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    color: #666;
+}
+
+.form-switch {
+    text-align: center;
+    margin-top: var(--spacing-md);
+}
+
+.form-decoration {
+    position: relative;
+    height: 100%;
+    min-height: 500px;
+}
+
+.decoration-shape {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--accent-color), #a29bfe);
+    opacity: 0.1;
+}
+
+.shape-1 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 20%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.shape-2 {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 60%;
+    animation: float 8s ease-in-out infinite;
+}
+
+.shape-3 {
+    width: 150px;
+    height: 150px;
+    top: 70%;
+    left: 10%;
+    animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}

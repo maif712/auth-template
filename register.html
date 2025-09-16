@@ -24,28 +24,37 @@
 <main>
     <section class="form-section section-padding">
         <div class="container">
-            <div class="form-container" data-aos="fade-up">
-                <form id="register-form" class="form-card">
-                    <h2 class="form-title">Create an Account</h2>
-                    <div class="form-group">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" id="password" name="password" class="form-input" placeholder="Enter your password" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="confirm-password" class="form-label">Confirm Password</label>
-                        <input type="password" id="confirm-password" name="confirm-password" class="form-input" placeholder="Confirm your password" required>
-                    </div>
-                    <button type="submit" class="cta-button-primary form-button">Register</button>
-                    <p class="form-message"></p>
-                </form>
+            <div class="form-grid">
+                <div class="form-wrapper" data-aos="fade-right">
+                    <form id="register-form" class="form-card">
+                        <h2 class="form-title">Create Your Account</h2>
+                        <p class="form-subtitle">Join us and start your creative journey.</p>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" id="password" name="password" class="form-input" placeholder="Enter your password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password" class="form-label">Confirm Password</label>
+                            <input type="password" id="confirm-password" name="confirm-password" class="form-input" placeholder="Confirm your password" required>
+                        </div>
+                        <button type="submit" class="cta-button-primary form-button">Register</button>
+                        <p class="form-message"></p>
+                        <p class="form-switch">Already have an account? <a href="login.html">Login</a></p>
+                    </form>
+                </div>
+                <div class="form-decoration" data-aos="fade-left">
+                    <div class="decoration-shape shape-1"></div>
+                    <div class="decoration-shape shape-2"></div>
+                    <div class="decoration-shape shape-3"></div>
+                </div>
             </div>
         </div>
     </section>
