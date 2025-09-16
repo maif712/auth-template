@@ -94,30 +94,49 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
-.nav-button {
+.nav-button, .nav-button-primary {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
     padding: var(--spacing-sm) var(--spacing-md);
     border: 1px solid var(--accent-color);
     border-radius: var(--border-radius);
     transition: all var(--transition-speed) ease;
 }
 
-.nav-button:hover {
-    background-color: var(--accent-color);
-    color: var(--bg-color);
+.nav-button {
+    background-color: transparent;
+    color: var(--accent-color);
 }
 
 .nav-button-primary {
-    padding: var(--spacing-sm) var(--spacing-md);
-    border: 1px solid var(--accent-color);
     background-color: var(--accent-color);
     color: var(--bg-color);
-    border-radius: var(--border-radius);
-    transition: all var(--transition-speed) ease;
 }
 
-.nav-button-primary:hover {
-    background-color: #3c34b3;
-    border-color: #3c34b3;
+.nav-button:hover, .nav-button-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.nav-button::after, .nav-button-primary::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    z-index: -1;
+    opacity: 0;
+}
+
+.nav-button:hover::after, .nav-button-primary:hover::after {
+    left: 100%;
+    opacity: 1;
+    transition: all 0.5s ease-out;
 }
 
 /* Footer */
