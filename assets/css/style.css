@@ -95,13 +95,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-button, .nav-button-primary {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
     padding: var(--spacing-sm) var(--spacing-md);
-    border: 1px solid var(--accent-color);
-    border-radius: var(--border-radius);
+    border: 2px solid var(--accent-color);
+    border-radius: 50px;
     transition: all var(--transition-speed) ease;
+    font-weight: 600;
 }
 
 .nav-button {
@@ -109,34 +107,25 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--accent-color);
 }
 
-.nav-button-primary {
+.nav-button:hover {
     background-color: var(--accent-color);
     color: var(--bg-color);
-}
-
-.nav-button:hover, .nav-button-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.nav-button::after, .nav-button-primary::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: rgba(255, 255, 255, 0.2);
-    transform: rotate(45deg);
-    transition: all 0.5s ease;
-    z-index: -1;
-    opacity: 0;
+.nav-button-primary {
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 51%, #6a11cb 100%);
+    background-size: 200% auto;
+    color: var(--bg-color);
+    border: none;
+    padding: calc(var(--spacing-sm) + 2px) calc(var(--spacing-md) + 2px);
 }
 
-.nav-button:hover::after, .nav-button-primary:hover::after {
-    left: 100%;
-    opacity: 1;
-    transition: all 0.5s ease-out;
+.nav-button-primary:hover {
+    background-position: right center;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* Footer */
@@ -362,12 +351,21 @@ h1, h2, h3, h4, h5, h6 {
 .form-button {
     width: 100%;
     margin-top: var(--spacing-md);
+    padding: var(--spacing-md);
+    border: none;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 51%, #6a11cb 100%);
+    background-size: 200% auto;
+    color: var(--bg-color);
+    font-weight: 600;
+    font-size: 1.1rem;
     transition: all var(--transition-speed) ease;
 }
 
 .form-button:hover {
+    background-position: right center;
     transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .form-message {
