@@ -82,4 +82,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
     }
+
+    // Hero Parallax Effect
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        const shapes = hero.querySelectorAll('.shape');
+        hero.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            const x = clientX / window.innerWidth;
+            const y = clientY / window.innerHeight;
+
+            shapes.forEach((shape, index) => {
+                const speed = (index + 1) * 0.5;
+                const xPos = (x - 0.5) * 20 * speed;
+                const yPos = (y - 0.5) * 20 * speed;
+                shape.style.transform = `translate(${xPos}px, ${yPos}px)`;
+            });
+        });
+    }
 });

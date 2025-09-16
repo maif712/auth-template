@@ -160,30 +160,52 @@ h1, h2, h3, h4, h5, h6 {
 /* Hero Section */
 .hero {
     position: relative;
-    background: linear-gradient(270deg, #6a11cb, #2575fc, #f9ce34, #ff6b6b);
-    background-size: 800% 800%;
+    background-color: #1a1a2e;
     color: var(--bg-color);
     text-align: center;
-    padding: 100px 0;
-    animation: moveGradient 15s ease infinite;
+    padding: 150px 0;
     overflow: hidden;
 }
 
-.hero::before {
-    content: '';
+.hero-background-shapes {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
     z-index: 0;
 }
 
-@keyframes moveGradient {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--accent-color), #a29bfe);
+    opacity: 0.2;
+    animation: float 10s ease-in-out infinite;
+}
+
+.shape-1 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 10%;
+    animation-duration: 12s;
+}
+
+.shape-2 {
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 70%;
+    animation-duration: 15s;
+}
+
+.shape-3 {
+    width: 150px;
+    height: 150px;
+    top: 80%;
+    left: 30%;
+    animation-duration: 10s;
 }
 
 .hero-content {
@@ -192,8 +214,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-title {
-    font-size: 3.5rem;
-    margin-bottom: var(--spacing-sm);
+    font-size: 4.5rem;
+    margin-bottom: var(--spacing-md);
+    font-weight: 700;
+}
+
+.hero-title .word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: revealWord 0.5s ease forwards;
+}
+
+.hero-title .word:nth-child(1) { animation-delay: 0.1s; }
+.hero-title .word:nth-child(2) { animation-delay: 0.2s; }
+.hero-title .word:nth-child(3) { animation-delay: 0.3s; }
+.hero-title .word:nth-child(4) { animation-delay: 0.4s; }
+.hero-title .word:nth-child(5) { animation-delay: 0.5s; }
+.hero-title .word:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes revealWord {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero-subtitle {
