@@ -1,0 +1,119 @@
+/* Common Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --font-family: 'Poppins', sans-serif;
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --accent-color: #4f46e5;
+    --muted-color: #f3f4f6;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 32px;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Page-specific styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-bottom: 1px solid var(--muted-color);
+}
+
+header nav a {
+    font-weight: 600;
+}
+
+header nav ul {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-lg);
+}
+
+#login-form {
+    background-color: var(--muted-color);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+#login-form h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+}
+
+.form-group input {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.cta-button {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: none;
+    border-radius: 4px;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #3c34b3;
+}
+
+.form-message {
+    text-align: center;
+    margin-top: var(--spacing-md);
+    color: red;
+}
+
+footer {
+    text-align: center;
+    padding: var(--spacing-md);
+    border-top: 1px solid var(--muted-color);
+}
